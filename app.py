@@ -10,7 +10,7 @@ app = Flask(__name__)
 def predict():
     return render_template('Manual_predict.html')
 
-@app.route('/y_predict',methods=['POST','GET'])
+@app.route('/y_predict',methods=['POST'])
 def y_predict():
     x_test = [[float(x) for x in request.form.values()]]
     print('actual',x_test)
